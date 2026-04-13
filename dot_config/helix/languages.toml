@@ -1,0 +1,52 @@
+[[language]]
+name = "elixir"
+language-servers = ["expert"]
+file-types = ["ex", "exs", "heex"]
+auto-format = true
+
+[language-server.expert]
+command = "/home/robo/.local/bin/expert_linux_amd64"
+args = ["--stdio"]
+
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "jsx"
+language-servers = [ "typescript-language-server", "tailwindcss-ls", "oxlint-language-server"]
+formatter = { command = "oxfmt", args = ["--stdio"] }
+
+[[language]]
+name = "tsx"
+language-servers = [ "typescript-language-server", "tailwindcss-ls", "oxlint-language-server"]
+formatter = { command = "oxfmt", args = ["--stdio"] }
+
+[[language]]
+name = "elixir"
+language-id = "phoenix-heex"
+auto-format = true
+
+[[language]]
+name = "heex"
+language-id = "phoenix-heex"
+language-servers = [ "expert", "tailwindcss-ls", "vscode-html-language-server" ]
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
+formatter = { command = "oxfmt", args = ["--stdio"] }
+
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server", "oxlint-language-server"]
+formatter = { command = "oxfmt", args = ["--stdio"] }
