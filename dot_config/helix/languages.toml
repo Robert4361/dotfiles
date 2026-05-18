@@ -1,12 +1,16 @@
+[language-server.dexter]
+command = "dexter"
+args = ["lsp"]
+
+[language-server.expert]
+command = "/home/robo/.local/bin/expert_linux_amd64"
+args = ["--stdio"]
+
 [[language]]
 name = "elixir"
 language-servers = ["expert"]
 file-types = ["ex", "exs", "heex"]
 auto-format = true
-
-[language-server.expert]
-command = "/home/robo/.local/bin/expert_linux_amd64"
-args = ["--stdio"]
 
 [language-server.tailwindcss-ls]
 command = "tailwindcss-language-server"
@@ -38,7 +42,7 @@ auto-format = true
 [[language]]
 name = "heex"
 language-id = "phoenix-heex"
-language-servers = [ "expert", "tailwindcss-ls", "vscode-html-language-server" ]
+language-servers = [ "dexter", "tailwindcss-ls", "vscode-html-language-server" ]
 auto-format = true
 
 [[language]]
