@@ -194,8 +194,8 @@ binds {
     Mod+Shift+9 { move-column-to-workspace 9; }
 
     // === Column Management ===
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Shift+BracketLeft  { consume-or-expel-window-left; }
+    Mod+Shift+BracketRight { consume-or-expel-window-right; }
     Mod+Period { expel-window-from-column; }
 
     // === Sizing & Layout ===
